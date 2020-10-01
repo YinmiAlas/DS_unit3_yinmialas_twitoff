@@ -21,7 +21,10 @@ def create_app():
 
         return f'{username} has been added to the DB!'
 
+
     return app
+
+    
 
 
 # to create the sqlite db we need to run this code
