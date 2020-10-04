@@ -4,11 +4,15 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+jupyter = "*"
 
 [packages]
 flask = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
+tweepy = "*"
+python-dotenv = "*"
+spacy = "*"
 
 [requires]
 python_version = "3.8"
