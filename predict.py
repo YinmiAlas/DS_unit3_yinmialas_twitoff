@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from .db_model import User
 from .twitter import nlp, vectorize_tweet
+
 def predict_user(user1, user2, tweet_text):
     '''Determine and return which user is more likely to say a given tweet.
     # Arguments: 

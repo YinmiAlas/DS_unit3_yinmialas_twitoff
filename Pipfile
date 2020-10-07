@@ -15,6 +15,7 @@ python-dotenv = "*"
 spacy = "*"
 scikit-learn = "*"
 pandas = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.8"
