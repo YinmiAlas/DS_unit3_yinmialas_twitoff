@@ -14,7 +14,7 @@ TWITTER_AUTH.set_access_token(getenv('TWITTER_ACCESS_TOKEN'),
 
 TWITTER = tweepy.API(TWITTER_AUTH)
 
-nlp = spacy.load('en_core_web_md', disable=['tagger', 'parser'])
+nlp = spacy.load('spacy_md_model')
 
 def vectorize_tweet(nlp, tweet_text):
     return list(nlp(tweet_text).vector)
@@ -114,3 +114,8 @@ def add_user_history(username):
         # If no errors happend than commit the records
         DB.session.commit()
         print('Successfully saved tweets to DB!')
+
+def update_all_users():
+    '''This function uodates tweets for all users'''
+    for user in User.query.all():
+        add_user_tweepy(user.username)
