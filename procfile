@@ -1,1 +1,2 @@
-web: gunicorn DS_unit3_yinmialas_twitoff:APP -t 120
+web: gunicorn twitoff:APP -t 120
+
